@@ -3,4 +3,4 @@ xmltodict
 json
 datetime
 uvicorn[standard]
-fastapi
+fastapi =

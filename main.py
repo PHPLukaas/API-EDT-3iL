@@ -5,9 +5,11 @@ from emploi_du_temps import get_classes, get_cours_for_date
 
 app = FastAPI()
 
+
 @app.get("/classes")
 def read_classes():
-    return get_classes()
+    classes = get_classes()
+    return Response(json.dumps({"status": "success", "data": classes}), media_type='application/json; charset=UTF-8')
 
 @app.get("/edt/{fichier_xml_classe}")
 def read_edt(fichier_xml_classe: str, date: str = datetime.today().strftime('%d-%m-%Y')):
