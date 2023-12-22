@@ -1,0 +1,6 @@
+requests
+xmltodict
+json
+datetime
+uvicorn[standard]
+fastapi
